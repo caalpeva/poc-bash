@@ -45,31 +45,31 @@ COLOR_ERROR=${COLOR_RED_BOLD}
 COLOR_DONE=${COLOR_GREEN}
 
 # Print debug formatted
-echo_debug() {
+print_debug() {
   datetime=$(date '+%Y-%m-%d %H:%M:%S,%3N')
   echo -e "${COLOR_DEBUG}${datetime} [DEBUG] ${1}\e[0m"
 }
 
 # Print info formatted
-echo_info() {
+print_info() {
   datetime=$(date '+%Y-%m-%d %H:%M:%S,%3N')
   echo -e "${COLOR_INFO}${datetime} [INFO] ${1}\e[0m"
 }
 
 # Print warning formatted
-echo_warning() {
+print_warn() {
   datetime=$(date '+%Y-%m-%d %H:%M:%S,%3N')
   echo -e "${COLOR_WARNING}${datetime} [WARN] ${1}\e[0m"
 }
 
 # Print error formatted
-echo_error() {
+print_error() {
   datetime=$(date '+%Y-%m-%d %H:%M:%S,%3N')
   echo -e "${COLOR_ERROR}${datetime} [ERROR] ${1}\e[0m"
 }
 
 # Print done formatted
-echo_done() {
+print_done() {
   datetime=$(date '+%Y-%m-%d %H:%M:%S,%3N')
   echo -e "${COLOR_DONE}${datetime} [DONE] ${1}\e[0m"
 }
