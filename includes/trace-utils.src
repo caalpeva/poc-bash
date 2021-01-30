@@ -1,0 +1,12 @@
+#!/bin/echo "source me !"
+
+##############################
+#         FUNCTIONS          #
+##############################
+
+trace() {
+    case $1 in
+        on) set -x ;;
+        off) { set +x; } 2>/dev/null  ;;
+    esac
+}
