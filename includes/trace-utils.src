@@ -4,9 +4,18 @@
 #         FUNCTIONS          #
 ##############################
 
-trace() {
+#trace() {
+#    case $1 in
+#        on) set -x ;;
+#        off) { set +x; } 2>/dev/null  ;;
+#    esac
+#}
+
+shopt -s expand_aliases
+_xtrace() {
     case $1 in
         on) set -x ;;
-        off) { set +x; } 2>/dev/null  ;;
+        off) set +x ;;
     esac
 }
+alias xtrace='{ _xtrace $(cat); } 2>/dev/null <<<'
