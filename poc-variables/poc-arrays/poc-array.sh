@@ -2,23 +2,23 @@
 
 DIR=$(dirname $(readlink -f $0))
 
-source "${DIR}/../includes/print-utils.src"
+source "${DIR}/../../includes/print-utils.src"
 
-declare -a fruits=("apple" "banana" "melon" "strawberry" "orange" "lemon")
-fruits[6]="pear"
+declare -a data=("apple" "banana" "melon" "strawberry" "orange" "lemon")
+data[6]="pear"
 
 function unsetArrayElement {
-    print_debug "Remove element from array with index $1 and value ${fruits[$1]}"
-    unset fruits[$1]
-    #echo ${fruits[$1]}
+    print_debug "Remove element from array with index $1 and value ${data[$1]}"
+    unset data[$1]
+    #echo ${data[$1]}
 }
 
 function showArray {
-    echo "Content: ${fruits[*]}"
-    echo "Elements (size = ${#fruits[@]}):"
-    for fruit in ${fruits[@]}
+    echo "Content: ${data[*]}"
+    echo "Elements (size = ${#data[@]}):"
+    for item in ${data[@]}
         do
-            echo -e "\t ${fruit}"
+            echo -e "\t ${item}"
         done
 }
 
