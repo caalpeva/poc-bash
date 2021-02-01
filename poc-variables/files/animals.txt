@@ -1,0 +1,7 @@
+mammals y otros
+birds
+reptiles
+amphibians
+fish
+insects
+crustaceans

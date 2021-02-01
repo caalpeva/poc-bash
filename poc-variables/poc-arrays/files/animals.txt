@@ -1,0 +1,7 @@
+mammals
+birds
+reptiles
+amphibians
+fish
+insects
+crustaceans
