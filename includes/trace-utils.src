@@ -24,4 +24,5 @@ _xtrace() {
         off) set +x ;;
     esac
 }
+
 alias xtrace='{ _xtrace $(cat); } 2>/dev/null <<<'
