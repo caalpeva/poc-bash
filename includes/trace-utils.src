@@ -4,6 +4,12 @@
 #         FUNCTIONS          #
 ##############################
 
+_exit() {
+  rc=${2:-1}
+  echo -e "\n$1"
+  exit $rc
+}
+
 #trace() {
 #    case $1 in
 #        on) set -x ;;
