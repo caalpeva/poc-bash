@@ -1,0 +1,13 @@
+#!/bin/echo "source me !"
+
+function showProgressBar() {
+  PID=$1
+  i=1
+  sp="/-\|"
+  echo -n ' '
+  while [ -d /proc/$PID ]
+  do
+    printf "\b${sp:i++%${#sp}:1}" 1>&2
+    sleep .5
+  done
+}
