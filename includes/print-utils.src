@@ -111,3 +111,18 @@ function print_box() {
   echo "${middle_edge}"
   echo -e "${edge}\n"
 }
+
+# Print messages into box
+function check_command() {
+  #which $@
+	command -v "$@" > /dev/null 2>&1
+}
+
+function check_mandatory_command_installed() {
+  if ! check_command $1; then
+    cat >&2 <<-'EOF'
+      Error: $1 not found.
+EOF
+    exit 1
+  fi
+}
